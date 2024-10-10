@@ -30,7 +30,7 @@ function App() {
             <ul>
                 {todos.map((todo) => (
                     <li key={todo.id}
-                        style={{display: 'flex', alignItems: 'center', justifyContent: 'space-around'}}>{todo.content}
+                        style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>{todo.content}
                         <button onClick={() => deleteTodo(todo.id)}>Effacer</button>
                     </li>
                 ))}
