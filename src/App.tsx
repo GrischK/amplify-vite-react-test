@@ -16,7 +16,7 @@ function App() {
     }, []);
 
     function createTodo() {
-        client.models.Todo.create({content: window.prompt("Todo content")});
+        client.models.Todo.create({content: window.prompt("Todo contenu")});
     }
 
     function deleteTodo(id: string) {
@@ -25,24 +25,24 @@ function App() {
 
     return (
         <main>
-            <h1>My todos</h1>
-            <button onClick={createTodo}>+ new</button>
+            <h1>Mes todos</h1>
+            <button onClick={createTodo}>+ nouveau</button>
             <ul>
                 {todos.map((todo) => (
                     <li key={todo.id}
                         style={{display: 'flex', alignItems: 'center', justifyContent: 'space-around'}}>{todo.content}
-                        <button onClick={() => deleteTodo(todo.id)}>Delete</button>
+                        <button onClick={() => deleteTodo(todo.id)}>Effacer</button>
                     </li>
                 ))}
             </ul>
             <div>
-                🥳 App successfully hosted. Try creating a new todo.
+                🥳 App déployée avec succès. Essaie de créer une nouvelle todo.
                 <br/>
                 <a href="https://docs.amplify.aws/react/start/quickstart/#make-frontend-updates">
-                    Review next step of this tutorial.
+                    Lien du tuto.
                 </a>
             </div>
-            <button onClick={signOut}>Sign out</button>
+            <button onClick={signOut}>Déconnexion</button>
         </main>
     );
 }
